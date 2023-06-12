@@ -171,12 +171,11 @@ main {
 .test-container-for-main {
     width: 650px;
     min-width: 400px;
-    border: 1px solid pink;
     color: white;
     height: 400px;
     position: absolute;
     right: 45px;
-    top: 50px;
+    top: 72px;
     z-index: 3;
 }
 .test-container-for-main h1 {
@@ -252,11 +251,12 @@ main {
 
 .info-card {
     height: 390px;
-    padding: 16px 20px;
+    padding: 16px 20px 16px 24px;
     border: 2px solid var(--secondary-color);
     width: 23%;
     border-radius: 10px;
     color: var(--secondary-color);
+    position: relative;
 }
 
 .info-card h2 {
@@ -264,7 +264,8 @@ main {
     font-size: 40px;
     font-family: 'Gentium Book Plus', serif;
     font-weight: bold ;
-    margin: 4px 0 ;
+    margin: 8px 0 40px;
+    line-height: 32px;
 
 }
 .info-card p {
@@ -272,49 +273,148 @@ main {
     font-size: 16px;
     line-height: 24px;
 }
-
+.info-card-paragraph-box {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    height: 170px;
+    width: 90%;
+}
+/* ------------new section pricing card */
+.space2{
+    height: 273px;
+    width: 100%;
+    background: linear-gradient(180deg, var(--background-color) 40% , darkblue );
+}
 /* ------------new section pricing card */
 
 #paid {
     width: 100%;
     padding: 20px 50px;
-    border: 1px solid var(--secondary-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: darkblue;
+    position: relative;
+    top: 180px;
+}
+
+h1
+{
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 40px;
 }
 
 .payment-cards-cards{
-    width: 420px;
+    max-width: 420px;
     display: flex;
     border: 3px solid #6b7d9e;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    transform: scale(0.9);
+    color: white;
 }
+
 .payment-card {
     display: grid;
     width: 380px;
-    border: 1px solid rgb(24, 24, 13);
-    transform: scale(0.8);
-
-
+    max-width: 380px;
+    justify-content: center;
+    align-items: center;
 }
+
+.payment-card .Buy {
+    background-color: var(--tertary-color);
+    width: 100px;
+    height: 50px;
+    border : none;
+    border-radius: 10px;
+    margin-left: 45px;
+}
+
 .payment-card h2 {
     text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 40px;
 }
 
 .pricing-text1 , .pricing-text2 {
     width: 100%;
     padding: 8px 16px;
     text-align: center;
+    font-size: 20px;
 }
 .pro {
     background: #4a5261;
     border: 3px solid #686f7a;
-    transform: scale(1.07);
+    transform: scale(1.03);
 }
+
+/*RESPONSIVENESS*/
+
+@media (max-width : 1234px) {
+    #paid
+    {
+        flex-direction: column;
+    }
+
+    .info-card h2 {
+        text-align: start;
+        font-size: 30px;
+        font-family: 'Gentium Book Plus', serif;
+        font-weight: bold ;
+        margin: 4px 0 ;
+    
+    }
+    .info-card p {
+        font-size: 12px;
+    }
+    
+}
+
+@media (max-width : 964px) {
+    
+    #card-container {
+        flex-direction: column;
+    }
+
+    .info-card {
+        min-height: 100px;
+        padding: 16px 20px;
+        border: 2px solid var(--secondary-color);
+        min-width: 70%;
+        border-radius: 10px;
+        color: var(--secondary-color);
+    }
+    
+}
+
+@media (max-width : 720px)
+{
+    .test-container-for-main h1 {
+        font-size: 30px;
+    }
+    .test-container-for-main p {
+        font-size: 20px;
+    }
+
+    .payment-cards-cards{
+        transform: scale(0.7);
+        margin: 0;
+    }
+
+    .pro {
+        transform: scale(0.9);
+        margin: 0;
+    }
+}
+
+/*I MADE MOST OF THE PAGE RESPONSIVE CAUSE I WAS BORED YOU JUST NEED TO ADD A 
+HAMBURGER MENU TO MAKE THE NAV BAR RESPONSIVE*/
 
 
 
