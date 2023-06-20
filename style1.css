@@ -433,6 +433,7 @@ nav ul a li:hover {
     top: -10%;
     right: 6%;
     transform: scale(0.7);
+    animation: bump 20s infinite ;
 }
 .faq-flex-container {
     box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
@@ -1144,12 +1145,31 @@ a {
         height: 200px;
         width: 200px;
         margin: 32px 0;
-        transform: translateX(40%);
+        transform: translateX(45%);
     }
     h4 {
         color: var(--tertary-color);
         font-family: 'Poppins', sans-serif;
         font-size: 8px;
         text-align: center;
+    }
+}
+
+@keyframes bump {
+    20%{
+        transform: scale(1.001);
+    }
+    40%{
+        transform:scale(1.0);
+    }
+    60%{
+        transform: scale(1.01);
+    }
+    
+    80%{
+        transform: scale(1.001);
+    }
+    100%{
+        transform:scale(1.0);
     }
 }
