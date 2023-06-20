@@ -102,59 +102,60 @@ nav ul a li:hover {
     z-index: 3;
 }
 
-#hero-section-one .one::before{
+#about .one::before{
     top: 10% ;
     left: 20%;
     z-index: 3;
 }
-#hero-section-one .two::before{
+#about .two::before{
     top: 43% ;
     left: 20%;
     z-index: 3;
 }
-#hero-section-one .three::before{
+#about .three::before{
     top: 80% ;
     left: 20%;
     z-index: 3;
 }
-#hero-section-one .four::before{
+#about .four::before{
     top: 10% ;
     left: 53.4%;
     z-index: 3;
 }
-#hero-section-one .five::before{
+#about .five::before{
     top: 43% ;
     left: 53.4%;
     z-index: 3;
 }
-#hero-section-one .six::before{
+#about .six::before{
     top: 80% ;
     left: 53.4%;
     z-index: 3;
 }
-#hero-section-one .seven::before{
+#about .seven::before{
     top: 10% ;
     left: 80%;
     z-index: 3;
 }
-#hero-section-one .eight::before{
+#about .eight::before{
     top: 42% ;
     left: 80%;
     z-index: 3;
 }
-#hero-section-one .nine::before{
+#about .nine::before{
     top: 80% ;
     left: 80%;
     z-index: 3;
 }
 
 .what-we-offer {
-    width: 62%;
+    width: 63%;
     z-index: 6;
     position: relative;
     color: white;
     background: var(--background-color);
     padding: 48px;
+    box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
 }
 
 .what-we-offer h2 {
@@ -174,4 +175,368 @@ nav ul a li:hover {
 
 /* -------the call to action buttons */
 
-#
+#callto-action {
+    height: 750px;
+    background: var(--background-color);
+    position: relative;
+    padding: 88px 56px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbs-up{
+    position: absolute;
+    right: 3%;
+    top: -40%;
+    z-index: 5;
+}
+.graph{
+    position: absolute;
+    top: 7%;
+    z-index: 5;
+    transform: translateX(50%);
+    transform: scale(1.1);
+}
+.call-contents {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 40%;
+}
+/* -------call to action buttons */
+
+#callto-action h2 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 48px;
+    color: var(--second-text-color);
+    margin:  32px 0;
+    text-align: center;
+    
+}
+.btn-section    {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 48%;
+}
+
+.ready {
+    width: 300px;
+    height: 72px;
+    border: none;
+    border-radius: 13px;
+    padding: 24px 72px;
+    text-align: center;   
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif; 
+    position: relative;
+    overflow: hidden;
+}
+
+.ready:hover {
+    transform:scale(1.1)
+}
+.rready{
+    background: linear-gradient(90deg, var(--secondary-color) 70% , var(--main-color) 100% );
+    color: var(--tertary-color);
+    border: none;
+}
+
+.rready::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--main-color);
+    width: 100%;
+    z-index: -1;
+    left:0;
+    height: 0%;
+    transition:  0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    border: none;
+}
+.rready:hover{
+    color: var(--text-color);
+    box-shadow: 10px 10px 20px var(--main-color) ,
+    -10px -10px 20px var(--main-color);
+    background: #4d4dff;
+    transition: all 1s ease;
+}
+
+.rready:hover::before {
+    height: 180%;
+}
+
+.curriculum{
+    background: linear-gradient(90deg, var(--main-color) 80% , var(--secondary-color) 100% );
+    color: var(--second-text-color);
+    border: none;
+}
+
+.curriculum::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--secondary-color);
+    width: 100%;
+    z-index: -1;
+    left:0;
+    height: 0%;
+    transition:  0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    border: none;
+}
+.curriculum:hover{
+    color: var(--text-color);
+    box-shadow: 10px 10px 20px var(--secondary-color) ,
+    -10px -10px 20px var(--secondary-color);
+    background: #4d4dff;
+    transition: all 1s ease;
+}
+
+.curriculum:hover::before {
+    height: 180%;
+}
+
+/* --------support section */
+
+#support {
+    background: url(./media2/background0900.png);
+    width: 100%;
+    height: 700px;
+    background-position: 20% center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+}
+
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    background: #000000dc;
+}
+.img-box {
+    width: 30%;
+    height: 100%;
+    position: relative;
+}
+.book   {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.3),
+    -1px -1px 30px rgba(255, 255, 255, 0.3)
+
+}
+
+.logo{
+    height: 100%;
+    width: 240px;
+}
+.text-box {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+}
+ .logo-inner-box {
+    height: 40%;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: -40%;
+    left: 0%;
+    
+}
+
+.heading-inner-box {
+    font-family: 'Poppins', sans-serif;
+    color: var(--secondary-color);
+    font-size: 32px;
+    width: 100%;
+}
+
+.para-inner-box {
+    padding: 30px 0 ;
+    font-family: 'Varela', sans-serif;
+    font-size: 20px;
+    color: var(--secondary-color);
+    width: 100%;
+}
+.para-inner-box a {
+    padding: 30px 0 ;
+    font-family: 'Varela', sans-serif;
+    font-size: 20px;
+    color: var(--secondary-color);
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ;
+    font-weight: 600;
+}
+
+.para-inner-box a:hover {
+    text-decoration: underline;
+    color: var(--tertary-color);
+}
+
+/* --------#faq section */
+
+#faq {
+    background: url(./media/final.png);
+    width: 100%;
+    height: 1000px;
+    background-position: 90% center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 104px;
+    background-position: center center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.faq-flex-container {
+    box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    width: 85%;
+    background: #000000ea;
+}
+.faq-flex-container h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: var(--secondary-color);
+}
+
+.faq-flex-container .q-a-collab{
+    margin: 16px 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.411);
+}
+
+.faq-flex-container .questions{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: var(--second-text-color);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.faq-flex-container .questions span {
+    color: var(--secondary-color);
+}
+.faq-flex-container .questions hr {
+    color: var(--secondary-color);
+    width: 22%;
+    opacity: 0.2;
+    position: relative;
+    left: 10px;
+}
+.faq-flex-container .answers{
+    width: 75%;
+    color: var(--secondary-color);
+    font-family: 'Varela', sans-serif;
+    display: none;
+}
+
+.faq-flex-container .questions svg{
+    position: absolute;
+    right: 0%;
+    height: 24px;
+    width: 40px;
+    top: -8%;
+    fill: var(--secondary-color);
+}
+
+/* -----logo sections */
+
+.justforlogos{
+    height: 400px;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.logo-flex-container img{
+    height: 200px;
+    width: 200px;
+    margin: 0 32px;
+}
+
+/* -----------footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    height: 200px;
+    width: 100%;
+}
+.footer-flex-container * {
+    border: 1px solid red;
+}
+.footer-flex-container{
+    width: 60%;
+    height: 120px;
+}
+.socials-sections{
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    color: var(--tertary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+a {
+    text-decoration: none;
+}
+.facebook svg, .instagram svg, .linkedin svg, .twitter svg, .github svg  {
+    fill: var(--tertary-color);
+    height: 60px;
+    width: 60px;
+    transition: all 0.3s;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.facebook svg:hover, .instagram svg:hover, .linkedin svg:hover, .twitter svg:hover, .github svg:hover  {
+    fill: var(--main-color);
+    height: 65px;
+    width: 65px;
+}
