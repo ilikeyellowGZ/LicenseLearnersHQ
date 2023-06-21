@@ -480,8 +480,16 @@ nav ul a li:hover {
     color: var(--secondary-color);
     font-family: 'Varela', sans-serif;
     display: none;
+    transition: all 0.2s;
 }
-
+.faq-flex-container .answer1.answer1-open, .answer2.answer2-open,.answer3.answer3-open,.answer4.answer4-open,.answer5.answer5-open,.answer6.answer6-open{
+    width: 75%;
+    color: var(--secondary-color);
+    font-family: 'Varela', sans-serif;
+    display: block;
+    margin:10px 0;
+    transition: all 0.4s;
+}
 .faq-flex-container .questions svg{
     position: absolute;
     right: 0%;
@@ -489,6 +497,11 @@ nav ul a li:hover {
     width: 40px;
     top: -8%;
     fill: var(--secondary-color);
+}
+
+.faq-flex-container .questions .caret1-rotate,.caret2-rotate,.caret3-rotate,.caret4-rotate,.caret5-rotate,.caret6-rotate{
+    transform: rotate(180deg);
+    transition: all 0.5s;
 }
 
 /* -----logo sections */
@@ -702,6 +715,14 @@ a {
         font-family: 'Varela', sans-serif;
         display: none;
     }
+    .faq-flex-container .answer1.answer1-open, .answer2.answer2-open,.answer3.answer3-open,.answer4.answer4-open,.answer5.answer5-open,.answer6.answer6-open{
+        width: 100%;
+        color: var(--secondary-color);
+        font-family: 'Varela', sans-serif;
+        display: block;
+        margin:10px 0;
+        
+    }
 }
 
 @media (max-width:999px) and (min-width:700px) {
@@ -874,6 +895,21 @@ a {
         align-items: center;
         position: relative;
         padding: 10px 0;
+    }
+    .faq-flex-container .answers{
+        width: 75%;
+        color: var(--secondary-color);
+        font-family: 'Varela', sans-serif;
+        display: none;
+        transition: all 0.2s;
+    }
+    .faq-flex-container .answer1.answer1-open, .answer2.answer2-open,.answer3.answer3-open,.answer4.answer4-open,.answer5.answer5-open,.answer6.answer6-open{
+        width: 100%;
+        color: var(--secondary-color);
+        font-family: 'Varela', sans-serif;
+        display: block;
+        margin:10px 0;
+        
     }
 
 }
@@ -1125,6 +1161,14 @@ a {
         color: var(--secondary-color);
         font-family: 'Varela', sans-serif;
         display: none;
+        font-size: 12px;
+    }
+    .faq-flex-container .answer1.answer1-open, .answer2.answer2-open,.answer3.answer3-open,.answer4.answer4-open,.answer5.answer5-open,.answer6.answer6-open{
+        width: 100%;
+        color: var(--secondary-color);
+        font-family: 'Varela', sans-serif;
+        display: block;
+        margin:10px 0;
         font-size: 12px;
     }
 

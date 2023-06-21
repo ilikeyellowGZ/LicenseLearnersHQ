@@ -45,3 +45,35 @@ question6.addEventListener("click", () => {
   answer6.classList.toggle("answer6-open");
   caret6.classList.toggle("caret6-rotate");
 });
+
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question6")) return;
+  answer6.classList.remove("answer6-open");
+  caret6.classList.remove("caret6-rotate");
+});
+
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question5")) return;
+  answer5.classList.remove("answer5-open");
+  caret5.classList.remove("caret5-rotate");
+});
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question4")) return;
+  answer4.classList.remove("answer4-open");
+  caret4.classList.remove("caret4-rotate");
+});
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question3")) return;
+  answer3.classList.remove("answer3-open");
+  caret3.classList.remove("caret3-rotate");
+});
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question2")) return;
+  answer2.classList.remove("answer2-open");
+  caret2.classList.remove("caret2-rotate");
+});
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".question1")) return;
+  answer1.classList.remove("answer1-open");
+  caret1.classList.remove("caret1-rotate");
+});
