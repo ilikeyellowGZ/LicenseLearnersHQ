@@ -19,7 +19,7 @@
       --main-heaing-font: font-family: 'Poppins', sans-serif;
       --main-para-text:font-family: 'Varela', sans-serif;
   }
-  @media (min-width:1280px) {
+  @media (min-width:1281px) {
     body {
       background: #111;
        height: 100vh;
@@ -34,7 +34,7 @@
       border-radius: 50%;
       background: #333;
       position: absolute;
-      top: 8vh;
+      top: 2.5vh;
       right: 2.5vh;
       display: flex;
       justify-content: center;
@@ -568,7 +568,6 @@
         top: 30px;
       }
       .go-back {
-        display: block;
         height: 40px;
         width: 100px;
         border-radius: 7%;
