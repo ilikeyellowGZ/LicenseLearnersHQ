@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+:root {
+  --main-color: #4d4dff;
+  --secondary-color: #ff00ff;
+  --tertary-color: #fff44f;
+  --background-color: #000;
+  --text-color: #f8e3e3;
+  --second-text-color: #fff;
+  --main-heaing-font: "Poppins", sans-serif;
+  --main-para-text: "Varela", sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+}
+
+#about {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: radial-gradient(#fff 0px, transparent 1px),
+    radial-gradient(#fff 0, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  background-repeat: repeat;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 96px;
+}
+
+.black-space::before {
+  background: var(--background-color);
+}
+
+.black-space::before,
+.black-space::after {
+  content: "";
+  filter: blur(1rem);
+  height: 12rem;
+  position: absolute;
+  width: 12rem;
+  z-index: 3;
+  border-radius: 50%;
+}
+
+#about .one::before {
+  top: 10%;
+  left: 20%;
+  z-index: 3;
+}
+#about .two::before {
+  top: 43%;
+  left: 20%;
+  z-index: 3;
+}
+#about .three::before {
+  top: 80%;
+  left: 20%;
+  z-index: 3;
+}
+#about .four::before {
+  top: 10%;
+  left: 53.4%;
+  z-index: 3;
+}
+#about .five::before {
+  top: 43%;
+  left: 53.4%;
+  z-index: 3;
+}
+#about .six::before {
+  top: 80%;
+  left: 53.4%;
+  z-index: 3;
+}
+#about .seven::before {
+  top: 10%;
+  left: 80%;
+  z-index: 3;
+}
+#about .eight::before {
+  top: 42%;
+  left: 80%;
+  z-index: 3;
+}
+#about .nine::before {
+  top: 80%;
+  left: 80%;
+  z-index: 3;
+}
+
+.flex-container {
+  z-index: 4;
+  position: relative;
+  width: 60dvw;
+  height: 80dvh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  background: var(--background-color);
+  box-shadow: 1px 1px 30px rgba(255, 255, 255, 0.096),
+    -1px -1px 30px rgba(255, 255, 255, 0.096);
+  padding: 60px 30px;
+}
+a {
+  width: 20%;
+  text-decoration: none;
+}
+form {
+  display: flex;
+  height: 300%;
+  justify-content: center;
+  align-items: center;
+}
+.user,
+.emaill {
+  height: 80%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.flex-container h1 {
+  font-family: var(--main-heaing-font);
+  font-size: 48px;
+  text-align: center;
+  line-height: 48px;
+  color: var(--second-text-color);
+}
+
+.flex-container p {
+  font-family: var(--main-para-text);
+  font-size: 20px;
+  text-align: center;
+}
+.user input,
+.emaill input {
+  height: 60%;
+  width: 100%;
+  font-size: 19px;
+  color: #000;
+  background: var(--tertary-color);
+  border: none;
+  padding: 8px 4px;
+  outline: none;
+  border-right: 4px solid rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+}
+
+.emaill input::-webkit-input-placeholder {
+  color: rgb(216, 209, 209);
+}
+.user input::-webkit-input-placeholder {
+  color: rgb(216, 209, 209);
+}
+
+button {
+  height: 48%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 4px 4px 0;
+  cursor: pointer;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color) 70%,
+    var(--main-color) 100%
+  );
+  transition: all 1s ease;
+  color: white;
+  border: none;
+  font-size: 19px;
+  font-family: var(--main-heaing-font);
+}
+
+button:hover {
+  color: var(--text-color);
+  background: #4d4dff;
+  color: var(--tertary-color);
+  text-shadow: -50px 0px 1px #000, 50px 0px 1px white;
+}
