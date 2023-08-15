@@ -12,44 +12,132 @@
       defer
       src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
     ></script>
-    <script defer src="./script.js"></script>
+    <script defer src="./index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Contact us</title>
   </head>
   <body>
     <header>
-        <h1>Contacts US</h1>
-        <p> Collaboration is a two-way street. Collaborators can also benefit
-            from the knowledge and expertise shared on our website. By
-            participating in joint projects, contributors can learn from each
-            other, exchange ideas, and collectively contribute gain profits by
-            having a bigger audience.</p>
+      <h1>Get in Touch with Us</h1>
+      <p>
+        Collaboration is a two-way street. Collaborators can also benefit from
+        the knowledge and expertise shared on our website. By participating in
+        joint projects, contributors can learn from each other, exchange ideas,
+        and collectively contribute gain profits by having a bigger audience.
+      </p>
+      <section id="return">
+        <a href="#"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M21 11H6.83l3.58-3.59L9 6l-6 6l6 6l1.41-1.42L6.83 13H21v-2Z"
+            /></svg
+        ></a>
+      </section>
     </header>
-    <div class="info-flex-container">
-      <form action="" method="get">
-            <div class="user-email">
-              <div class="user">
-                <label for="username">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Enter your full name"
-                />
-              </div>
-              <div class="email">
-                <label for="email">Password</label>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Enter your email address"
-                />
-              </div>
-              <div class="sum"><label for="nayh">hgmSVEKHJfv
-                <input type="radio" name="nayh" id="nayh"></label></div>
+    <main>
+      <div id="error"></div>
+      <div class="info-flex-container">
+        <form id="form">
+          <div class="user-email">
+            <div class="user">
+              <input
+                id="username"
+                type="text"
+                name="username"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div class="email">
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="radio-section">
+            <h1 id="question-for-contact">
+              What type of business would you like to contact me for?
+            </h1>
+            <div id="isGiveStress">
               
-      </form>
-    </div>
-    <div class="message-flex-container"></div>
+               
+                <input
+                  type="radio"
+                  name="main-radio-input"
+                  id="Collaboration"
+                  value="Collaboration"
+                /> <label for="Collaboration">Collaboration</label>
+              
+               
+                <input
+                  type="radio"
+                  name="main-radio-input"
+                  id="Did-you-find-bugs"
+                  value="Did-you-find-bugs"
+                /> <label for="Did-you-find-bugs">Did you find bugs</label>
+              
+                <input
+                type="radio"
+                name="main-radio-input"
+                id="other"
+                value="other"
+                /> <label for="other">Other</label>
+                
+               
+             
+                
+                <input type="radio" name="main-radio-input" id="cancel" value="yessir" />
+              <label for="cancel">Cancel</label>
+            </div>
+          </div>
+          <div class="messageFor-form">
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Write here for more information"
+            ></textarea>
+          </div>
+
+          <div class="submit-form-btn">
+            <button type="submit" id="submit-btn">SUBMIT</button>
+          </div>
+        </form>
+      </div>
+      <div class="message-flex-container"></div>
+    </main>
+    <input type="radio" name="payment" id="card" checked="checked" />
+    <label for="card">Card</label>
+    <input type="radio" name="payment" id="cash" />
+    <label for="cash">Cash</label>
+    </label>
   </body>
 </html>
+
+<!-- <ul>
+  <li>
+    <a href="#">Collaboration</a>
+  </li>
+  <li>
+    <a href="#">Did you find bugs</a>
+  </li>
+  <li>
+    <a href="#">other</a>
+  </li>
+  <li>
+    <a href="#">Complains</a>
+  </li>
+</ul>
+ -->
