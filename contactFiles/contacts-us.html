@@ -12,6 +12,7 @@
       defer
       src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
     ></script>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
     <script defer src="./index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,7 +46,7 @@
     <main>
       <div id="error"></div>
       <div class="info-flex-container">
-        <form id="form">
+        <form id="form" ">
           <div class="user-email">
             <div class="user">
               <input
@@ -54,6 +55,7 @@
                 name="username"
                 placeholder="Enter your full name"
                 required
+                autofocus
               />
             </div>
             <div class="email">
