@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bebas+Neue&family=Gentium+Book+Plus&family=Instrument+Sans&family=Inter&family=Nanum+Gothic&family=Noto+Serif+Khojki&family=Nunito:wght@300&family=Pacifico&family=Playfair+Display&family=Poppins&family=Quicksand&family=Raleway&family=Raleway+Dots&family=Rubik+Puddles&family=Shadows+Into+Light&family=Sono&family=Tilt+Warp&family=Wix+Madefor+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+      --main-color: #4d4dff;
+      --secondary-color: #ff00ff;
+      --tertary-color: #fff44f;
+      --background-color: #121212 ;
+      --text-color: #f8e3e3;
+      --second-text-color: #fff ;
+      --main-heaing-font: font-family: 'Poppins', sans-serif;
+      --main-para-text:font-family: 'Varela', sans-serif;
+  }
+
+  html, body {
+    background: var(--background-color) ;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+    color: var(--second-text-color);
+}
+
+#questionContainer{
+    border: 1px solid white;
+    width: 70%;
+    height: 75%;
+    padding: 22px;
+}
+.questionsWrapper {
+    margin-bottom: 8px;
+}
+.answerContainer {
+    margin-top: 8px;
+}
+.questionsWrapper ,.answerContainer {
+    border: 1px solid blue;
+    width: 100%;
+    height: 50%;
+}
+
+.answerWrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+.answersHere{
+    border: 1px solid red;
+    max-width: 100%;
+    padding: 8px 16px;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.answersHere:hover {
+    transform: scale(1.02);
+    max-width: 100%;
+}
