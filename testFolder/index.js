@@ -19,6 +19,7 @@ function startGame() {
   currentQuestionIndex = 0;
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
+  setInterval(updateCOuntdown, 1000);
 }
 
 function setNextQuestion() {
@@ -120,3 +121,17 @@ const questions = [
     ],
   },
 ];
+
+const startingTime = 60;
+let timer = startingTime * 60;
+
+const time = document.getElementById("time");
+
+function updateCOuntdown() {
+  const minutes = Math.floor(timer / 60);
+  let seconds = timer % 60;
+
+  time.innerHTML = `${minutes}:${seconds}`;
+
+  timer--;
+}

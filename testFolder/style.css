@@ -183,3 +183,22 @@ body.wrong {
 .hide {
   display: none;
 }
+
+
+
+/* --------timer sections */
+
+.timerContainer {
+    max-height: 120px;
+    height: 70px;
+    width: 200px;
+    border: 1px solid white;
+    position: absolute;
+    padding: 8px 16px;
+    bottom: 30px;
+    right: 30px;
+}
+.timeWrapper {
+    display: flex;
+    
+}
