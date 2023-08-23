@@ -191,14 +191,35 @@ body.wrong {
 .timerContainer {
     max-height: 120px;
     height: 70px;
-    width: 200px;
-    border: 1px solid white;
+    width: 100%;
     position: absolute;
     padding: 8px 16px;
-    bottom: 30px;
-    right: 30px;
-}
-.timeWrapper {
-    display: flex;
+    bottom: 0px;
+    right: 0px;
+   display: flex;
+   justify-content: end;
     
 }
+.timeWrapper {
+  
+   display: flex;
+   justify-content: center;
+   height: 100%;
+   text-overflow: none;
+   word-wrap: break-word;
+   justify-content: center;
+   width: 200px;
+   
+}
+
+
+/* im trying to make a line to indicate how much time is really left */
+/* if (shuffledQuestions.length + 1 >= questions ) {
+    // There are questions remaining
+    console.log(`${userScore}/${questions.length}`);
+   
+  } else {
+    // No more questions, display score
+    setNextQuestion();
+    /* questionContainerElement.innerHTML = `<h2>Your Score: ${userScore}/${questions.length}</h2>`; */
+  

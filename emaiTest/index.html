@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src=""></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email_Attempt</title>
+  </head>
+  <body>
+    <h1>Send Email</h1>
+    Sender name
+    <input type="text" id="sendername" /> <br />
+    to (Email)
+    <input type="text" id="to" /> <br />
+    Subjects
+    <input type="text" id="subject" /> <br />
+    Reply to (Email)
+    <input type="text" id="replyto" /> <br />
+    message <br />
+    <textarea id="message" cols="40" rows="8"></textarea> <br />
+    <button onclick="sendEmail()">send email</button>
+  </body>
+  <script>
+    function sendEmail() {
+      (function () {
+        emailjs.init("iR9VPYJmH1lmfLk6Q");
+      })();
+
+      var params = {
+        sendername: document.getElementById("sendername").value,
+        to: document.getElementById("to").value,
+        subjects: document.getElementById("subject").value,
+        replyTo: document.getElementById("replyto").value,
+        message: document.getElementById("message").value,
+      };
+      let serviceId = "service_0cea2w7";
+      let templateId = "template_hbxiot9";
+
+      emailjs.send(serviceId, templateId, params).then((res) => {
+        alert("Email sent Succ");
+      });
+    }
+  </script>
+</html>
+
+<!-- yeah i just made the email function right here i think it will be easy to transfer to where its needed so i wont explain it here :) -->

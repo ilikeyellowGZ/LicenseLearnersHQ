@@ -20,6 +20,7 @@ function startGame() {
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
   setInterval(updateCOuntdown, 1000);
+  //i did this by myself, it should work but it wasnt working yesterday :(
 }
 
 function setNextQuestion() {
@@ -53,6 +54,11 @@ function selectAnswer(e) {
   const selectedButton = e.target;
   const correct = selectedButton.dataset.correct;
   setStatusClass(document.body, correct);
+
+  if (correct) {
+    userScore++;
+  }
+  //this right is for the score at the bottom of the code.
   Array.from(answerButtonsElement.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
     if (selectedButton === correct) {
@@ -64,11 +70,13 @@ function selectAnswer(e) {
 
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
-    // the email function should be right here becaUSE this says when the test is finished remove hide somewhere and restarts
   } else {
+    console.log(`${userScore}/${questions.length}`);
+    userScore = 0;
+    // i added the scoring system right here (up arrow right)
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
-  }
+  } // the email function should be right here becaUSE this says when the test is finished remove hide somewhere and restarts
 }
 //writing my own function for the one the user selected(wish me luck) i had to move my function up by a couple lines
 
@@ -134,4 +142,9 @@ function updateCOuntdown() {
   time.innerHTML = `${minutes}:${seconds}`;
 
   timer--;
+  // the day after installing this feature, it started randomly working like wtf but aii this is coding for gang!!!!!!
 }
+
+//trying to add a scoring system innit bruv :)
+let userScore = 0;
+function resetScore() {}
