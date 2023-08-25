@@ -179,6 +179,7 @@ a {
     transform-style: preserve-3d;
     transition: .5s;
     cursor: pointer;
+    background: transparent;
     transform: rotateY(25deg) rotateX(40deg) rotateZ(-20deg);
     box-shadow: -1px 1px #3e3e3e, -2px 2px #3e3e3e, -3px 3px #3e3e3e, -4px 4px #3e3e3e, -5px 5px #3e3e3e, -6px 6px #3e3e3e, -7px 7px #3e3e3e, -8px 8px #3e3e3e;
     animation: gatekeep 2s linear 2s 1 ;
@@ -186,7 +187,8 @@ a {
 
 .btn:hover {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-   border: none;
+   border-right: 5px solid #3e3e3e ;
+   border-bottom: 5px solid #3e3e3e ;
    box-shadow: none
    
 }
