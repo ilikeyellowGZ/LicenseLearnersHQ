@@ -209,8 +209,21 @@ body.wrong {
    word-wrap: break-word;
    justify-content: center;
    width: 200px;
-   
 }
+.almostFinished {
+    animation: timerIsFinishing 1s linear  infinite ;
+}
+
+@keyframes timerIsFinishing {
+    100%, 0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
 
 
 /* im trying to make a line to indicate how much time is really left */

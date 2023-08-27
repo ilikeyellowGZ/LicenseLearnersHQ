@@ -3,7 +3,7 @@ const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
-const alreadyDone = document.querySelectorAll(".btn");
+const items = document.querySelectorAll(".btn");
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -57,14 +57,15 @@ function selectAnswer(e) {
 
   if (correct) {
     userScore++;
+  } else {
+    selectedButton.style.color = "white";
+    selectedButton.style.backgroundColor = "red";
   }
-  //this right is for the score at the bottom of the code.
+
   Array.from(answerButtonsElement.children).forEach((button) => {
-    setStatusClass(button, button.dataset.correct);
-    if (selectedButton === correct) {
-    } else {
-      selectedButton.style.color = "white";
-      selectedButton.style.backgroundColor = "red";
+    button.disabled = true; // Disable all answer buttons
+    if (button.dataset.correct === "true") {
+      button.style.backgroundColor = "green"; // Correct answer button
     }
   });
 
@@ -76,8 +77,10 @@ function selectAnswer(e) {
     // i added the scoring system right here (up arrow right)
     startButton.innerText = "Restart";
     startButton.classList.remove("hide");
-  } // the email function should be right here becaUSE this says when the test is finished remove hide somewhere and restarts
-}
+  }
+  // The email function or any further logic can be added here
+} // the email function should be right here becaUSE this says when the test is finished remove hide somewhere and restarts
+
 //writing my own function for the one the user selected(wish me luck) i had to move my function up by a couple lines
 
 function setStatusClass(element, correct) {
@@ -130,8 +133,8 @@ const questions = [
   },
 ];
 
-const startingTime = 60;
-let timer = startingTime * 60;
+const startingTime = 3600;
+let timer = startingTime;
 
 const time = document.getElementById("time");
 
@@ -142,6 +145,22 @@ function updateCOuntdown() {
   time.innerHTML = `${minutes}:${seconds}`;
 
   timer--;
+  if (timer < 600) {
+    time.style.color = "#ffa500";
+    time.classList.add("almostFinished");
+  }
+  if (timer < 60) {
+    time.style.color = "crimson";
+    time.classList.remove("almostFinished");
+    time.classList.add("sixtysecLeft");
+  }
+  if (timer <= 0) {
+    time.innerHTML = "00:00";
+    time.style.color = "red";
+    time.classList.remove("sixtysecLeft");
+    // you  can put the email function in this funtion right here.
+  }
+
   // the day after installing this feature, it started randomly working like wtf but aii this is coding for gang!!!!!!
 }
 
