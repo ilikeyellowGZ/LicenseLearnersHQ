@@ -182,9 +182,7 @@ body.wrong {
   align-items: center;
 }
 
-.hide {
-  display: none;
-}
+
 
 .rainbow-border {
 animation: rainbow 20s linear 1s infinite ;
@@ -194,7 +192,7 @@ animation: rainbow 20s linear 1s infinite ;
 
 /* --------timer sections */
 
-.timerContainer {
+#timerContainer  {
     max-height: 120px;
     height: 70px;
     width: 100%;
@@ -206,6 +204,7 @@ animation: rainbow 20s linear 1s infinite ;
    justify-content: end;
     
 }
+
 .timeWrapper {
   
    display: flex;
@@ -216,8 +215,12 @@ animation: rainbow 20s linear 1s infinite ;
    justify-content: center;
    width: 200px;
 }
+
 .almostFinished {
     animation: timerIsFinishing 1s linear  infinite ;
+}
+.hide {
+    display: none; 
 }
 
 @keyframes timerIsFinishing {

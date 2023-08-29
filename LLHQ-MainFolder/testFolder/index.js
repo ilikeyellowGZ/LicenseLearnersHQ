@@ -8,8 +8,11 @@ const items = document.querySelectorAll(".btn");
 
 let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener("click", startGame);
+startButton.addEventListener("click", startGame, () => {
+  timeContainer.classList.remove("hide");
+});
 // i added a coloful border remove it lol
+/* sessionStorage.setItem("questionaire", `${questions.in}`); */
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
@@ -74,7 +77,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
   } else {
-    sendEmail();
+    /* sendEmail(); */
     console.log(`${userScore}/${questions.length}`);
     userScore = 0;
     // i added the scoring system right here (up arrow right)
@@ -105,6 +108,7 @@ const startingTime = 3600;
 let timer = startingTime;
 
 const time = document.getElementById("time");
+const timeContainer = document.getElementById("timerContainer");
 
 function updateCOuntdown() {
   const minutes = Math.floor(timer / 60);
