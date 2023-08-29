@@ -1,4 +1,5 @@
 const startButton = document.getElementById("start-btn");
+const container = document.getElementById("container");
 const nextButton = document.getElementById("next-btn");
 const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
@@ -8,6 +9,7 @@ const items = document.querySelectorAll(".btn");
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener("click", startGame);
+// i added a coloful border remove it lol
 nextButton.addEventListener("click", () => {
   currentQuestionIndex++;
   setNextQuestion();
@@ -72,6 +74,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
   } else {
+    sendEmail();
     console.log(`${userScore}/${questions.length}`);
     userScore = 0;
     // i added the scoring system right here (up arrow right)
@@ -97,41 +100,6 @@ function clearStatusClass(element) {
   element.classList.remove("correct");
   element.classList.remove("wrong");
 }
-
-const questions = [
-  {
-    question: "What is 2 + 2?",
-    answers: [
-      { text: "4", correct: true },
-      { text: "22", correct: false },
-    ],
-  },
-  {
-    question: "how big is yout glizzy",
-    answers: [
-      { text: "small (sigh)", correct: true },
-      { text: "microphobia type", correct: true },
-      { text: "average", correct: false },
-      { text: "extra tonka", correct: false },
-    ],
-  },
-  {
-    question: "do you like men?",
-    answers: [
-      { text: "Kinda", correct: false },
-      { text: "YES!!!", correct: true },
-      { text: "Um no", correct: false },
-      { text: "IDK", correct: false },
-    ],
-  },
-  {
-    question: "whats your favourite word?",
-    answers: [
-      { text: "nigga", correct: true },
-      { text: "glizzy", correct: false },
-    ],
-  },
-];
 
 const startingTime = 3600;
 let timer = startingTime;
@@ -167,3 +135,25 @@ function updateCOuntdown() {
 //trying to add a scoring system innit bruv :)
 let userScore = 0;
 function resetScore() {}
+
+function sendEmail() {
+  (function () {
+    emailjs.init("iR9VPYJmH1lmfLk6Q");
+  })();
+  const usersName = localStorage.getItem("UserName");
+  const usersEmail = localStorage.getItem("UserEmail");
+
+  var params = {
+    sendername: "LearnerLicenseHQ",
+    to: usersEmail,
+    subjects: "Your practice learners license test has returned",
+    message: `Hello ${usersName}  your results have returned you got ${userScore}/${questions.length}`,
+  };
+  let serviceId = "service_0cea2w7";
+  let templateId = "template_hbxiot9";
+
+  emailjs.send(serviceId, templateId, params).then((res) => {
+    alert("Email sent Succ");
+  });
+  //added the email function so do not redo the test alot,and im actually doing well i do not need any assistance W.
+}

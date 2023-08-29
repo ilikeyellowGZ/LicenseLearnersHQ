@@ -28,8 +28,8 @@
       })();
 
       var params = {
-        sendername: document.getElementById("sendername").value,
-        to: document.getElementById("to").value,
+        sendername: localStorage.getItem("UserName"),
+        to: localStorage.getItem("UserEmail"),
         subjects: document.getElementById("subject").value,
         replyTo: document.getElementById("replyto").value,
         message: document.getElementById("message").value,
@@ -41,6 +41,8 @@
         alert("Email sent Succ");
       });
     }
+    const storedUsername = localStorage.getItem("UserName");
+    console.log(storedUsername);
   </script>
 </html>
 
