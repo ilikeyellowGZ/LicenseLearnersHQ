@@ -680,13 +680,14 @@ const questions = [
         correct: false,
       },
       {
-        text: "If you are in vehicle A, you shoould stop before the line indicated in the IM at RTM1",
+        text: "If you are in vehicle A, you shoould stop before the line indicated in the Im at RTM1",
         correct: true,
       },
     ],
   },
   {
-    question: "The road sign warns you of what?(AN IMAGE IS HERE)",
+    question: `The road sign warns you of what? ${(img.src =
+      "../If you are in vehicle A, you shoould stop before the line indicated in the Im at RTM1")}(AN IMAGE IS HERE)`,
     answers: [
       { text: "A motor agte to the left of the road", correct: false },
       { text: "A motor agte to the right of the road", correct: true },
@@ -730,7 +731,7 @@ const questions = [
   },
   {
     question:
-      "The load carried by a light/heavy motor vehicle should never project mroe than _____ beyond the front end of the vehicle",
+      "The load carried by a light/heavy motor vehicle should never project more than _____ beyond the front end of the vehicle",
     answers: [
       { text: "100 millimeters", correct: false },
       { text: "500 millimeters", correct: false },
