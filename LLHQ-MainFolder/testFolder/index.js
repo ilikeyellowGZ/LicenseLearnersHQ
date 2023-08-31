@@ -5,12 +5,12 @@ const questionContainerElement = document.getElementById("question-container");
 const questionElement = document.getElementById("question");
 const answerButtonsElement = document.getElementById("answer-buttons");
 const items = document.querySelectorAll(".btn");
+const text = document.getElementById("start-text");
+const timeContainer = document.getElementById("timerContainer");
 
 let shuffledQuestions, currentQuestionIndex;
 
-startButton.addEventListener("click", startGame, () => {
-  timeContainer.classList.remove("hide");
-});
+startButton.addEventListener("click", startGame, () => {});
 // i added a coloful border remove it lol
 /* sessionStorage.setItem("questionaire", `${questions.in}`); */
 nextButton.addEventListener("click", () => {
@@ -22,6 +22,8 @@ function startGame() {
   startButton.classList.add("hide");
   shuffledQuestions = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
+  text.style.display = "none";
+  timeContainer.style.display = "flex";
   questionContainerElement.classList.remove("hide");
   setNextQuestion();
   setInterval(updateCOuntdown, 1000);
@@ -77,7 +79,7 @@ function selectAnswer(e) {
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
     nextButton.classList.remove("hide");
   } else {
-    /* sendEmail(); */
+    sendEmail();
     console.log(`${userScore}/${questions.length}`);
     userScore = 0;
     // i added the scoring system right here (up arrow right)
@@ -104,11 +106,10 @@ function clearStatusClass(element) {
   element.classList.remove("wrong");
 }
 
-const startingTime = 3600;
+const startingTime = 1500;
 let timer = startingTime;
 
 const time = document.getElementById("time");
-const timeContainer = document.getElementById("timerContainer");
 
 function updateCOuntdown() {
   const minutes = Math.floor(timer / 60);
@@ -130,6 +131,7 @@ function updateCOuntdown() {
     time.innerHTML = "00:00";
     time.style.color = "red";
     time.classList.remove("sixtysecLeft");
+    sendEmail();
     // you  can put the email function in this funtion right here.
   }
 

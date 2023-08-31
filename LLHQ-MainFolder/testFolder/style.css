@@ -14,7 +14,7 @@
       --text-color: #f8e3e3;
       --second-text-color: #fff ;
       --main-heaing-font: font-family: 'Poppins', sans-serif;
-      --main-para-text:font-family: 'Varela', sans-serif;
+      --main-para-text: 'Varela', sans-serif;
   }
 
   html, body {
@@ -84,14 +84,16 @@ body.wrong {
 }
  */
 #container {
-    border: 1px solid white;
+    border-radius: 8px;
     width: 70%;
     height: 75%;
     padding: 22px;
     position: relative;
+    background:#181818 ;
 }
 .questionsBox , .asnwerContainer {
     padding: 24px ;
+    
 }
 .questionsBox {
     height: 40%;
@@ -111,16 +113,15 @@ body.wrong {
     align-items: center;
 }
 #question {
-    text-align: start;
+    text-align: center;
     display: flex;
-    border: 1px rgb(255, 255, 255) solid;
+    border: 2px rgb(255, 255, 255) solid;
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     font-weight: 400;
     font-size: 19px;
-
 }
 
 .btn {
@@ -173,7 +174,11 @@ body.wrong {
   font-weight: bold;
   padding: 10px 20px;
   cursor: pointer;
-  
+  z-index: 4;
+  transition: all 0.2s ease-in-out;
+}
+.next-btn:active {
+    transform: scale(0.93);
 }
 
 .controls {
@@ -200,13 +205,12 @@ animation: rainbow 20s linear 1s infinite ;
     padding: 8px 16px;
     bottom: 0px;
     right: 0px;
-   display: flex;
+   display: none;
    justify-content: end;
     
 }
 
 .timeWrapper {
-  
    display: flex;
    justify-content: center;
    height: 100%;
@@ -215,13 +219,28 @@ animation: rainbow 20s linear 1s infinite ;
    justify-content: center;
    width: 200px;
 }
+#start-text{
+    position: absolute;
+    text-align: start;
+    display: flex;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    font-weight: 400;
+    font-size: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px 14px; 
+}
+#start-text h3 {
+    font-size: 25px;
+    font-family: var(--main-para-text);
+}
 
 .almostFinished {
     animation: timerIsFinishing 1s linear  infinite ;
 }
-.hide {
-    display: none; 
-}
+
 
 @keyframes timerIsFinishing {
     100%, 0% {
@@ -231,6 +250,81 @@ animation: rainbow 20s linear 1s infinite ;
         transform: scale(1.1);
     }
 }
+/* COVER */
+.button-cover {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #18181a;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 15px;
+    padding: 18px 18px 17px;
+    text-decoration: none;
+    cursor: pointer;
+    background: var(--main-color);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width:200px;
+    border-radius: 8px;
+    box-shadow: #18181a 2px 2px 40px;
+    transition: all .2s ease;
+  }
+  .button-cover:active{
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.3) ,
+    -3px -3px 10px rgba(255, 255, 255, 0.3)
+    ;
+    transform: scale(0.9);
+    font-size: 24px;
+    border: none;
+  }
+  
+  .button-cover span:first-child {
+    position: relative;
+    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 10;
+  }
+  
+  .button-cover span:last-child {
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateY(225%) translateX(-50%);
+    height: 14px;
+    line-height: 13px;
+  }
+  
+  .button-cover:after {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#57b3ff ;
+    transform-origin: bottom center;
+    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+    transform: skewY(9.3deg) scaleY(0);
+    z-index: 50;
+  }
+  
+  .button-cover:hover:after {
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  
+  .button-cover:hover span:last-child {
+    transform: translateX(-50%) translateY(-100%);
+    opacity: 1;
+    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  }
 @keyframes rainbow {
     100% , 0% {
         border: 4px double red;
@@ -264,16 +358,6 @@ animation: rainbow 20s linear 1s infinite ;
     }
 }
 
-
-
-
-/* im trying to make a line to indicate how much time is really left */
-/* if (shuffledQuestions.length + 1 >= questions ) {
-    // There are questions remaining
-    console.log(`${userScore}/${questions.length}`);
-   
-  } else {
-    // No more questions, display score
-    setNextQuestion();
-    /* questionContainerElement.innerHTML = `<h2>Your Score: ${userScore}/${questions.length}</h2>`; */
-  
+    .hide {
+        display: none; 
+    }

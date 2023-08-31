@@ -686,8 +686,7 @@ const questions = [
     ],
   },
   {
-    question: `The road sign warns you of what? ${(img.src =
-      "../If you are in vehicle A, you shoould stop before the line indicated in the Im at RTM1")}(AN IMAGE IS HERE)`,
+    question: `The road sign warns you of what?(AN IMAGE IS HERE)`,
     answers: [
       { text: "A motor agte to the left of the road", correct: false },
       { text: "A motor agte to the right of the road", correct: true },
