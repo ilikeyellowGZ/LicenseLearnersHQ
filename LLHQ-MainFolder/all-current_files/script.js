@@ -1,4 +1,4 @@
-/* const answer1 = document.querySelector(".answer1");
+const answer1 = document.querySelector(".answer1");
 const answer2 = document.querySelector(".answer2");
 const answer3 = document.querySelector(".answer3");
 const answer4 = document.querySelector(".answer4");
@@ -76,20 +76,7 @@ document.addEventListener("click", function (event) {
   if (event.target.closest(".question1")) return;
   answer1.classList.remove("answer1-open");
   caret1.classList.remove("caret1-rotate");
-}); */
-
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const button = document.getElementById("submit-btn");
-
-button.addEventListener("click", (e) => {
-  localStorage.setItem("UserName", `${username.value}`); //OMG i made this work all by myself
-  localStorage.setItem("UserEmail", `${email.value}`);
 });
-
-const usernAme = "john_doe";
-localStorage.setItem("UserNAme", `${username}`);
-// Outputs: "john_doe"
 
 //done with this just need to href to the accoriding file when done.
 /* sendername: localStorage.getItem(UserName),
