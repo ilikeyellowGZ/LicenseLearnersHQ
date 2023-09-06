@@ -572,7 +572,18 @@ h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     text-align: center;
-    background-color: red;
+   border: 1px solid white;
+}
+h6 a  {
+    color: var(--tertary-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    text-align: center;
+   text-decoration: none;
+   transition: all 0.2s ;
+}
+h6 a:hover {
+    color: var(--secondary-color);
 }
 a {
     text-decoration: none;
