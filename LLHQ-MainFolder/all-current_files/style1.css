@@ -577,7 +577,7 @@ h4 {
 a {
     text-decoration: none;
 }
-.facebook svg, .instagram svg, .linkedin svg, .twitter svg, .github svg  {
+.github iconify-icon  {
     color: var(--tertary-color);
     height: 60px;
     width: 60px;
@@ -587,10 +587,10 @@ a {
     text-decoration: none;
     font-size: 36px;
     z-index: 10;
-    background-color: red;
+    
 }
 
-.facebook svg:hover, .instagram svg:hover, .linkedin svg:hover, .twitter svg:hover, .github iconify-icon:hover  {
+.github iconify-icon:hover  {
     color: var(--main-color);
     height: 65px;
     width: 65px;
