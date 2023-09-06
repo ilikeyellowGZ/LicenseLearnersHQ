@@ -6,13 +6,13 @@ const error = document.getElementById("error");
 const unorderedList = document.getElementById("isGiveStress");
 
 form.addEventListener("submit", (e) => {
-  let message = [];
-  if (username.value === "" || username.value === null) {
-  }
-  if (message.length > 0) {
-    e.preventDefault();
-    error.innerText = message.join(" , ");
-  }
+  e.preventDefault(); // Prevent the form from submitting normally
+
+  error.classList.remove("hide");
+
+  setTimeout(() => {
+    window.location.href = "../myOwnCarousel/index.html";
+  }, 3000);
 });
 
 const menuTrigger = document.getElementById("question-for-contact");

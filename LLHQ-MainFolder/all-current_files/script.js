@@ -78,6 +78,11 @@ document.addEventListener("click", function (event) {
   caret1.classList.remove("caret1-rotate");
 });
 
-//done with this just need to href to the accoriding file when done.
-/* sendername: localStorage.getItem(UserName),
-        to: localStorage.getItem(UserEmail), */
+const button = document.getElementById("submit-btn");
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // Prevent the form from submitting normally
+
+  window.location.href = "../myOwnCarousel/index.html";
+});
