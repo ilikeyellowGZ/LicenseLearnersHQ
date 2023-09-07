@@ -1,4 +1,4 @@
-const answer1 = document.querySelector(".answer1");
+/* const answer1 = document.querySelector(".answer1");
 const answer2 = document.querySelector(".answer2");
 const answer3 = document.querySelector(".answer3");
 const answer4 = document.querySelector(".answer4");
@@ -76,8 +76,8 @@ document.addEventListener("click", function (event) {
   if (event.target.closest(".question1")) return;
   answer1.classList.remove("answer1-open");
   caret1.classList.remove("caret1-rotate");
-});
-
+}); */
+// put this in its own seprate js file.
 const button = document.getElementById("submit-btn");
 const form = document.getElementById("form");
 

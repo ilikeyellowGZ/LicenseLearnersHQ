@@ -26,7 +26,8 @@
     scroll-behavior: smooth;
     color: var(--second-text-color);
     padding: 24px 48px;
-    
+    overflow: hidden;
+
 }
 
 header {
@@ -296,6 +297,7 @@ align-items: flex-end;
 /* -----------error"" */
 .hide {
     display: none;
+    
 }
 
 #error {
@@ -308,7 +310,7 @@ align-items: flex-end;
     background: white;
     font-size: 18px;
     font-family: var(--main-heaing-font);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-weight: 800;
